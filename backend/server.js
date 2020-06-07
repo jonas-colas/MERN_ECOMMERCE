@@ -1,13 +1,19 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+//import fileUpload from 'express-fileupload';
+//import path from 'path';
 import data from './data';
 import dotenv from 'dotenv';
 import config from './config';
-import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
+//import productRoute from './routes/productRoute';
+//import orderRoute from './routes/orderRoute';
 
 dotenv.config();
 
 //const mongodbUrl =config.MONGODB_URL;	
+//const port = config.PORT;
 mongoose.connect('mongodb://localhost/amazon', { //mongodbUrl, 
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
@@ -15,10 +21,12 @@ mongoose.connect('mongodb://localhost/amazon', { //mongodbUrl,
 }).catch(error => console.log(error.reason));
 
 mongoose.connection.on('connected', () => {
-	console.log('Mongoose is connected !!!');
+	console.log('Database connection is successful !!!');
 });
 
 const app = express();
+
+app.use(bodyParser.json());
 
 app.use("/api/users", userRoute);
 
