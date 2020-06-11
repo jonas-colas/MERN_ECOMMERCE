@@ -9,7 +9,7 @@ export default {
 			brand: 'Apple',
 			rating: 4.5,
 			numReviews: 10,
-			countInStock : 0
+			stock : 0
 		},
 		{
 			_id: '2',
@@ -20,7 +20,7 @@ export default {
 			brand: 'Apple',
 			rating: 4.2,
 			numReviews: 5,
-			countInStock : 10
+			stock : 10
 		},
 		{
 			_id: '3',
@@ -31,7 +31,7 @@ export default {
 			brand: 'Apple',
 			rating: 4.1,
 			numReviews: 10,
-			countInStock : 15
+			stock : 15
 		},
 		{
 			_id: '4',
@@ -42,7 +42,7 @@ export default {
 			brand: 'Facebook',
 			rating: 4.1,
 			numReviews: 8,
-			countInStock : 7
+			stock : 7
 		},
 		{
 			_id: '5',
@@ -53,7 +53,7 @@ export default {
 			brand: 'Sony',
 			rating: 4.5,
 			numReviews: 10,
-			countInStock : 14
+			stock : 14
 		},
 		{
 			_id: '6',
@@ -64,7 +64,7 @@ export default {
 			brand: 'Samsung',
 			rating: 4.2,
 			numReviews: 5,
-			countInStock : 6
+			stock : 6
 		},
 		{
 			_id: '7',
@@ -75,7 +75,7 @@ export default {
 			brand: 'Huawei',
 			rating: 4.1,
 			numReviews: 8,
-			countInStock : 8
+			stock : 8
 		},
 		{
 			_id: '8',
@@ -86,7 +86,7 @@ export default {
 			brand: 'Samsung',
 			rating: 4.1,
 			numReviews: 8,
-			countInStock : 12
+			stock : 12
 		}
 	]
 }

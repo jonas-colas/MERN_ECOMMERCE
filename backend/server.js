@@ -7,7 +7,7 @@ import data from './data';
 import dotenv from 'dotenv';
 import config from './config';
 import userRoute from './routes/userRoute';
-//import productRoute from './routes/productRoute';
+import productRoute from './routes/productRoute';
 //import orderRoute from './routes/orderRoute';
 
 dotenv.config();
@@ -29,8 +29,9 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use("/api/users", userRoute);
+app.use("/api/products", productRoute);
 
-app.get("/api/products/:id", (req, res) => {
+/*app.get("/api/products/:id", (req, res) => {
 	const productId = req.params.id;
 	const product = data.products.find(X => X._id === productId);
 	if (product) {
@@ -42,6 +43,6 @@ app.get("/api/products/:id", (req, res) => {
 
 app.get("/api/products", (req, res) => {
 	res.send(data.products);
-});
+});*/
 
 app.listen(5000, () => {console.log("server started at http://localhost:5000") });
